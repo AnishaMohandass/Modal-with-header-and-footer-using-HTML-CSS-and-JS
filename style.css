@@ -1,0 +1,94 @@
+body
+{
+    font-family: Forte;
+    font-size: 20px;
+    /* line-height: 1; */
+}
+
+.button
+{
+    background-color: indigo;
+    color:lavender;
+    padding: 16px 32px;
+    border: 0;
+}
+
+.button:hover
+{
+    background-color: lavender;
+    color: indigo;
+}
+
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.content
+{
+    background-color: white;
+    margin: 12% auto;
+    width: 700px;
+    box-shadow: 5px 5px 5px lightgrey;
+    animation-name: modalopen;
+    animation-duration: 2s;
+}
+
+.modalheader
+{
+    background-color: indigo;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.modalfooter
+{
+    background-color: indigo;
+    color: white;
+    padding: 15px;
+}
+
+.modalheader h2, .modalfooter p
+{
+    margin: 0;
+}
+
+.modalbody
+{
+    padding: 10px 20px;
+    word-spacing: 2px;
+    text-align: justify;
+}
+
+.closebtn
+{
+    color: gray;
+    float: right;
+    font-size: 30px;
+}
+
+.closebtn:hover , .closebtn:focus
+{
+    color: red;
+    cursor: pointer;
+}
+
+@keyframes modalopen
+{
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@media(max-width: 750px)
+{
+    .content {width: 300px;}
+}
